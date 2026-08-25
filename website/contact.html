@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Booking | Fallingbrook Health and Wellness</title>
+  <meta name="description" content="Contact Fallingbrook Health and Wellness or book an Acupuncture or Registered Massage Therapy appointment in Orléans, ON." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        Fallingbrook Health &amp; Wellness
+        <small>Acupuncture &middot; Massage Therapy</small>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="policies.html">Policies</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+          <li><a href="contact.html#book" class="btn btn-outline">Book an Appointment</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Contact &amp; Booking</h1>
+      </div>
+    </div>
+
+    <section id="book">
+      <div class="container contact-grid">
+        <div>
+          <h2 class="section-title" style="text-align:left">Get in Touch</h2>
+          <dl class="contact-details">
+            <dt>Address</dt>
+            <!-- TODO: confirm exact street number / unit for public display -->
+            <dd>Princess Louise Drive, Orléans, ON, Canada</dd>
+
+            <dt>Phone</dt>
+            <!-- TODO: replace with real phone number -->
+            <dd><a href="tel:+16135550123">(613) 555-0123</a></dd>
+
+            <dt>Email</dt>
+            <!-- TODO: replace with real email address -->
+            <dd><a href="mailto:info@fallingbrookhealthandwellness.ca">info@fallingbrookhealthandwellness.ca</a></dd>
+
+            <dt>Hours</dt>
+            <!-- TODO: replace with real hours of operation -->
+            <dd>By appointment &mdash; contact us for current availability</dd>
+
+            <dt>Online Booking</dt>
+            <!-- TODO: add a direct link to your online booking system, if you use one -->
+            <dd>Available by phone, email, or the form below</dd>
+          </dl>
+        </div>
+
+        <div>
+          <h2 class="section-title" style="text-align:left">Send a Message</h2>
+          <form class="contact-form" novalidate>
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div>
+              <label for="service">I'm interested in</label>
+              <select id="service" name="service">
+                <option value="acupuncture">Registered Acupuncture</option>
+                <option value="cosmetic-acupuncture">Cosmetic Acupuncture</option>
+                <option value="massage">Registered Massage Therapy</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <p class="form-status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Fallingbrook Health &amp; Wellness</h4>
+          <p>
+            Princess Louise Drive<br />
+            Orléans, ON, Canada
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="policies.html">Policies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+16135550123">(613) 555-0123</a></li>
+            <li><a href="mailto:info@fallingbrookhealthandwellness.ca">info@fallingbrookhealthandwellness.ca</a></li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="current-year"></span> Fallingbrook Health and Wellness. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

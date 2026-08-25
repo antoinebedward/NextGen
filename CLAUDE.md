@@ -2,17 +2,44 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Repository status
+## Project
 
-This repository (`antoinebedward/nextgen`) has not yet been initialized with a codebase. The only committed content is a single image asset (`undraw_Team_page_re_cffb.png`); there is no source code, build tooling, test suite, README, or dependency manifest to document.
+This repository holds the source for the Fallingbrook Health and Wellness
+website (Acupuncture, Cosmetic Acupuncture, and Registered Massage Therapy —
+Orléans, ON), under `website/`. It's a static, framework-free HTML/CSS/JS
+site with no build step, package manager, or test suite.
 
-There are no commands to run (build/lint/test) and no architecture to describe, because no application code exists yet.
+## Commands
 
-## Next steps
+There is no build/lint/test tooling. To preview the site locally:
 
-Once source code is added to this repository, this file should be updated (or regenerated via the `init` skill) to document:
-- Build, lint, and test commands, including how to run a single test
-- The high-level architecture and major components/modules
-- Project-specific conventions
+```
+cd website
+python3 -m http.server 8000
+```
 
-Until then, treat any instructions above this note as unverified and confirm the actual project structure by inspecting the working tree before acting.
+Or just open `website/index.html` directly in a browser.
+
+## Architecture
+
+- Each page under `website/` (`index.html`, `services.html`, `about.html`,
+  `policies.html`, `contact.html`) is fully self-contained — its own
+  `<head>`, header/nav, and footer are duplicated in every file rather than
+  assembled from includes, since there's no build step to stitch partials
+  together. When changing shared chrome (nav links, footer contact info),
+  update it in all five pages.
+- `website/css/style.css` is the single shared stylesheet for all pages —
+  CSS custom properties at the top (`--color-*`, `--font-*`) define the
+  palette/typography site-wide.
+- `website/js/main.js` is the single shared script (mobile nav toggle,
+  active-nav-link highlighting via current filename, footer year, contact
+  form client-side validation). The contact form has no backend wired up.
+- `website/assets/images/` holds site images.
+
+## Content status
+
+Much of the current copy (exact phone/email/address, hours, service
+pricing, social links, and the practitioner photo) is placeholder text
+marked with `TODO` comments in the HTML, pending the real values from the
+site owner. See `website/README.md` for the full list and for which facts
+are already verified vs. placeholder.
